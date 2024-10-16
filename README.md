@@ -59,15 +59,16 @@ This project is designed to detect anomalies in a continuous data stream in real
 ---
 
 ## Project Structure
-
+```
 anomaly_detection/
-├── data_stream.py # Contains the data_stream() function for generating the simulated data stream.
-├── ewma.py # Implements the EWMA calculation.
-├── detect_anomalies.py # Contains the function to detect anomalies based on residuals.
-├── plot_data.py # Manages real-time data visualization.
-├── main.py # Main script to run the data streaming, anomaly detection, and visualization.
-├── requirements.txt # Lists the required Python libraries.
-└── README.md # Project documentation.
+├── data_stream.py              # Contains the data_stream() function for generating the simulated data stream.
+├── ewma.py                     # Implements the EWMA calculation.
+├── detect_anomalies.py         # Contains the function to detect anomalies based on residuals.
+├── plot_data.py                # Manages real-time data visualization.
+├── main.py                     # Main script to run the data streaming, anomaly detection, and visualization.
+├── requirements.txt            # Lists the required Python libraries.
+└── README.md                   # Project documentation.
+```
 
 ## How to Run the Project
 
@@ -76,14 +77,12 @@ anomaly_detection/
    ```bash
    git clone https://github.com/your-repo/Efficient-Data-Stream-Anomaly-Detection.git
    cd Efficient-Data-Stream-Anomaly-Detection
-
    ```
 
 2. **Install Dependencies**:
 
    ```
    pip install -r requirements.txt
-
    ```
 
 3. **Run the project**:
@@ -99,15 +98,19 @@ The Exponentially Weighted Moving Average (EWMA) is a statistical method used to
 
 ### How It Works
 
-1. **Formula**: The EWMA is calculated using the formula:
-   \[
-   EWMA*t = \alpha \times X_t + (1 - \alpha) \times EWMA*{t-1}
-   \]
-   where:
+### 1. Formula
 
-   - \(EWMA_t\) is the current EWMA value,
-   - \(X_t\) is the current data point,
-   - \(\alpha\) (0 < α ≤ 1) is the smoothing factor that determines the weight given to the most recent observation. A higher \(\alpha\) places more emphasis on recent data.
+The Exponentially Weighted Moving Average (EWMA) is calculated using the formula:
+
+\[
+EWMA_t = \alpha \times X_t + (1 - \alpha) \times EWMA_{t-1}
+\]
+
+where:
+
+- \(EWMA_t\) is the current EWMA value,
+- \(X_t\) is the current data point,
+- \(\alpha\) (where \(0 < \alpha \leq 1\)) is the smoothing factor that determines the weight given to the most recent observation. A higher \(\alpha\) places more emphasis on recent data.
 
 2. **Initialization**: The EWMA starts with an initial value, which could be the first data point or a predetermined value.
 
