@@ -108,9 +108,9 @@ $$
 
 where:
 
-- \(EWMA_t\) is the current EWMA value,
-- \(X_t\) is the current data point,
-- \(\alpha\) (where \(0 < \alpha \leq 1\)) is the smoothing factor that determines the weight given to the most recent observation. A higher \(\alpha\) places more emphasis on recent data.
+- $EWMA_t$ is the current EWMA value,
+- $X_t$ is the current data point,
+- $\alpha$ (where $0 < \alpha \leq 1$) is the smoothing factor that determines the weight given to the most recent observation. A higher $\alpha$ places more emphasis on recent data.
 
 
 2. **Initialization**: The EWMA starts with an initial value, which could be the first data point or a predetermined value.
